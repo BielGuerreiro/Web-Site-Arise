@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  list-style: none;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
@@ -11,20 +13,6 @@ body {
   height: 100vh;
   overflow: hidden;
   position: relative;
-}
-
-.background-image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 60%;
-  height: 100%;
-  background-image: url("https://i.pinimg.com/originals/b8/4f/14/b84f14c9617602286322d8313020576e.jpg");
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
-  mask-image: linear-gradient(to left, black 60%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to left, black 60%, transparent 100%);
 }
 
 .overlay {
@@ -52,12 +40,10 @@ header {
 
 nav ul {
   display: flex;
-  list-style: none;
   gap: 40px;
 }
 
 nav a {
-  text-decoration: none;
   color: #ccc;
   font-size: 0.9rem;
   transition: 0.3s;
@@ -74,7 +60,6 @@ nav a:hover {
 }
 
 .signup-btn {
-  text-decoration: none;
   color: white;
   font-weight: bold;
 }
@@ -165,16 +150,11 @@ h1 {
   color: white;
 }
 
-.sidebar ul {
-  list-style: none;
-}
-
 .sidebar li {
   margin-bottom: 15px;
 }
 
 .sidebar a {
-  text-decoration: none;
   color: #6fa3dce3;
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -221,6 +201,16 @@ h1 {
   }
 }
 
+.personagem {
+  padding-top: 90px;
+  margin-left: 400px;
+}
+
+.personagem img {
+  width: 100%;
+  height: auto;
+}
+
 .p1 {
   left: 20%;
   animation-duration: 4s;
@@ -245,4 +235,89 @@ h1 {
   left: 80%;
   animation-duration: 7s;
   animation-delay: 3s;
+}
+
+/* responsivo ______________________________________________ */
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .background-image,
+  .overlay {
+    display: none;
+  }
+
+  main {
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+  }
+
+  .personagem {
+    order: 1;
+    display: block;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .personagem img {
+    max-width: 100%;
+    height: auto;
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  }
+
+  .hero-content {
+    order: 2;
+    max-width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .rank {
+    justify-content: center;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  .description {
+    text-align: center;
+  }
+
+  .sidebar {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  .sidebar h2 {
+    justify-content: center;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background-color: #050a19;
+  }
+
+  .header-right,
+  nav ul {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
 }
