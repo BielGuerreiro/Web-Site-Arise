@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #050a19;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background-image: url("https://i.pinimg.com/originals/b8/4f/14/b84f14c9617602286322d8313020576e.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  mask-image: linear-gradient(to left, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to left, black 60%, transparent 100%);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #0f193d 0%, #0f193d 30%, transparent 100%);
+  z-index: -1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.signup-btn {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.search-bar {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: white;
+  outline: none;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80vh;
+  padding: 0 50px;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.rank {
+  font-size: 1.5rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.rank span {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ffd700;
+  font-style: italic;
+  font-family: "Times New Roman", serif;
+}
+
+.subtitle {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.korean-name {
+  font-size: 1.5rem;
+  color: #bbb;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.description {
+  color: #ccc;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.sidebar {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.sidebar h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.sidebar h2::before {
+  content: "•";
+  color: white;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #6fa3dce3;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: white;
+  text-shadow: 0 0 10px #1c58a6;
+}
+
+.particles {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  bottom: -10px;
+  background: #ff5e00;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  animation: floatUp 5s infinite linear;
+  opacity: 0;
+}
+
+@keyframes floatUp {
+  0% {
+    bottom: 0;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    bottom: 80%;
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+.p1 {
+  left: 20%;
+  animation-duration: 4s;
+  animation-delay: 0s;
+}
+.p2 {
+  left: 50%;
+  animation-duration: 6s;
+  animation-delay: 1s;
+}
+.p3 {
+  left: 70%;
+  animation-duration: 3s;
+  animation-delay: 2s;
+}
+.p4 {
+  left: 30%;
+  animation-duration: 5s;
+  animation-delay: 0.5s;
+}
+.p5 {
+  left: 80%;
+  animation-duration: 7s;
+  animation-delay: 3s;
+}
