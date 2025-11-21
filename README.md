@@ -1,3 +1,2 @@
-[﻿# Arise
-# Arise
-](https://bielguerreiro.github.io/Arise)
+https://bielguerreiro.github.io/Arise
+
